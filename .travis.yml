@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "18"
+  - "16"
+  - "8"
+branches:
+  only:
+    - master
+cache:
+  npm: true
+services:
+  - mongodb
+before_script:
+  - cp .env.example .env
+os:
+  - linux
